@@ -1,0 +1,36 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 align = "center">Вітаємо на сайті аналізу петицій!</h1>
+<p style = "margin-bottom:20px">
+  Цей ресурс дозволяє проаналізувати успішність петицій<br /><br />
+  Цей проект працює з текстами петицій<br />
+  Проект реалізовано в рамках хакатону INT20H</p>
+
+  <form action="" method="post" name="inputText">
+  <!--  <fieldset> 
+      {{ form.hidden_tag() }} -->
+      <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+
+        <p>
+          Ви можете ввести свій текст тут:<br />
+          {{ form.inputText(size=300, placeholder="Введіть щось ...") }}<br />
+
+          {% for error in form.inputText.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}<br />
+        </p>
+    <!-- </fieldset> -->
+
+
+   <!-- <fieldset> -->
+        <nav>
+          <button class="big-btn" name="action-button" type="submit" value="TA">Проаналізувати петицію</button>
+        </nav>
+
+      </div>
+    <!-- </fieldset> -->
+  </form>
+{% endblock %}

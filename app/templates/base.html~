@@ -1,0 +1,34 @@
+<html>
+  <head>
+    {% if title %}
+      <title>{{ title }}</title>
+    {% else %}
+      <title>Ласкаво просимо!</title>
+    {% endif %}
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static', filename='offmuStyle.css') }}">
+
+    {% block head %}{% endblock %}
+  </head>
+
+
+  <body>
+    <div>Navigation:
+      <a href="/index">Аналіз петицій</a> |
+      <a href="/about">Про проект</a>
+    </div>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }} </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}  {% endblock %}
+
+  </body>
+</html>
