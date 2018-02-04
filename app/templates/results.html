@@ -7,7 +7,7 @@
   <h1>Аналіз тексту петиції</h1>
 
   <div>
-    <p>Цей інструмент аналізує успішність тексту петицій.<br>
+    <p>Цей інструмент надає рекомендації до тексту петицій.<br>
     </p>
   </div>
 
@@ -17,7 +17,9 @@
   </p>
   <hr>
     <div style="background-color:yellow";
-    <h2>Основні показники:</h2>
-    <p>Кількість символів:  <span class="stats">   {{ numChars }}</span> (включаючи пробіли)</p>
+    <p>Поради до тексту:  <span class="stats">   {{ advicesStr }}</span></p>
     </div>
+	<nav>
+          <button class="big-btn" onclick="window.location.href = 'https://petition.kievcity.gov.ua/login/?erl=0';">Проаналізувати петицію</button>
+        </nav>
 {% endblock %}
