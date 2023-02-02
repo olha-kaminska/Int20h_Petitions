@@ -4,7 +4,7 @@ Flask-WTF==0.14.2
 itsdangerous==0.24
 Jinja2==2.9.6
 MarkupSafe==0.23
-Werkzeug==0.12.1
+Werkzeug==0.15.5
 WTForms==2.1
 numpy==1.14.0
 pandas==0.18.1
